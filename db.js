@@ -1,5 +1,6 @@
 const mongoose=require('mongoose');
+require('dotenv').config()
 
-const connection=mongoose.connect("mongodb+srv://rutuvik:patil@cluster0.yalls5i.mongodb.net/emicalculator?retryWrites=true&w=majority")
+const connection=mongoose.connect(process.env.mongoURL)
 
 module.exports={connection}
